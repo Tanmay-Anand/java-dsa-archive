@@ -35,7 +35,3 @@ public class InvertedHollowTriangle {
         iht.printPattern(rows);
     }
 }
-
-//Simple solid triangle - DONE
-//Hollow Simple Triangle - DONE
-//Then, Inverted Hollow Triangle
