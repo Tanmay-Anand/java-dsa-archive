@@ -5,24 +5,20 @@ import java.util.Arrays;
 public class SecondLargest {
 
     public void meth(int[] arr) {
-        if (arr.length < 2) {
-            System.out.println("Array must have at least two elements");
-            return;
-        }
 
-        Arrays.sort(arr);
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
 
-        int n = arr.length;
-        int largest = arr[n - 1];
-
-        for (int i = n - 2; i >= 0; i--) {
-            if (arr[i] != largest) {
-                System.out.println("Second largest element: " + arr[i]);
-                return;
+        for (int num : arr) {
+            if (num > largest) {
+                secondLargest = largest;
+                largest = num;
+            } else if (num < largest && num > secondLargest) {
+                secondLargest = num;
             }
         }
 
-        System.out.println("No second largest element (all values same)");
+        System.out.println("Second Largest element is : " + secondLargest);
     }
 
     public static void main(String[] args) {
