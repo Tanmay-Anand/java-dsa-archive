@@ -24,8 +24,8 @@ class LongestSubarray {
     }
 
     public static void main(String[] args) {
-        int[] a = { -1, 1, 1 };
-        int k = 1;
+        int[] a = { 1, 2, 3, -3, 1, 1, 1, 4, 2, -3 };
+        int k = 3;
 
         LongestSubarray solver = new LongestSubarray();
         int len = solver.getLongestSubarray(a, k);
