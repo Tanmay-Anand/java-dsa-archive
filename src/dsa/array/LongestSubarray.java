@@ -14,14 +14,12 @@ class LongestSubarray {
             for (int j = i; j < n; j++) {
                 sum += a[j];
 
-
                 if (sum == k) {
 
                     maxLen = Math.max(maxLen, j - i + 1);
                 }
             }
         }
-
         return maxLen;
     }
 
@@ -32,7 +30,7 @@ class LongestSubarray {
         LongestSubarray solver = new LongestSubarray();
         int len = solver.getLongestSubarray(a, k);
 
-        System.out.println("The length of the longest subarray is: " + len);
+        System.out.println("The length of the longest sub-array is: " + len);
     }
 }
 
